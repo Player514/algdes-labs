@@ -1,8 +1,8 @@
 import sys
 import math
 import re 
+import time
 
-# A 2d-tree solution to the problem. This searches for the point closes to (10,10) right now.
 
 def parse_stdin(): 
     points = []
@@ -88,6 +88,22 @@ def nn(node, point, isX):
         
     return closest, closest_dist
 
+print("Starting all")
+start = time.time()
 node = create_kdtree(parse_stdin(), True)
+end = time.time()
+print("{:.2f}".format(end - start))
+
+print("Starting 10,10 search")
+start = time.time()
 res = nn(node, (10,10), True)
-print(res[0].name)
+end = time.time()
+print("{:.2f}".format(end - start))
+
+
+start = time.time()
+print("Starting 100000...")
+for i in range(100000):
+    res = nn(node, (1000-i,i), True)
+end = time.time()
+print("{:.2f}".format(end - start))
