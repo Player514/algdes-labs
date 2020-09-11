@@ -64,19 +64,23 @@ def create_kdtree(k, isX):
     return Node(k[median], left, right, isX, False)
 
 def nn(node, point, isX):
+    px = point[1]
+    py = point[2]
     if node is None:
         return None, None
+    if node.name is point[0]:
+        return None, None
     closest = node
-    closest_dist = dist(node.x, node.y, point[0], point[1])
+    closest_dist = dist(node.x, node.y, px, py)
     
     if isX:
-        if point[0] < node.x:
+        if px < node.x:
             branch = node.left
         else:
             branch = node.right
         new_node, new_closest_dist = nn(branch, point, not isX)
     else:
-        if point[1] < node.y:
+        if py < node.y:
             branch = node.left
         else:
             branch = node.right
@@ -88,22 +92,15 @@ def nn(node, point, isX):
         
     return closest, closest_dist
 
-print("Starting all")
-start = time.time()
-node = create_kdtree(parse_stdin(), True)
-end = time.time()
-print("{:.2f}".format(end - start))
+points = parse_stdin()
+node = create_kdtree(points, True)
 
-print("Starting 10,10 search")
-start = time.time()
-res = nn(node, (10,10), True)
+closest = (Node(('temp', 0,0), None, None, True, True),999999999)
+for p in points:
+    res = nn(node, p, True)
+    if res[0] is None:
+        continue
+    if(res[1] < closest[1]):
+        closest = res
 end = time.time()
-print("{:.2f}".format(end - start))
-
-
-start = time.time()
-print("Starting 100000...")
-for i in range(100000):
-    res = nn(node, (1000-i,i), True)
-end = time.time()
-print("{:.2f}".format(end - start))
+print(closest[1])
