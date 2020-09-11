@@ -29,7 +29,7 @@ def get_min_dist_in_points(points):
     return minimum
 
 def recursive_split(array, isWithinBelt):
-    if (len(array) > 3):
+    if (len(array) > 5):
         splitPoint = int(len(array) / 2)
 
         left_split_list = array[:splitPoint]

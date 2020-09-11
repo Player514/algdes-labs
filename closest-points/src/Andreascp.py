@@ -1,18 +1,19 @@
 import sys
 import math
-
+import re
+sys.setrecursionlimit(10**6)
 
 def parse_stdin(): 
     points = []
+    regex = re.compile('^\s*(?P<name>\w+)\s*(?P<x>([-+]?\d+(\.\d+)?([eE]?\+\d+)?))\s*(?P<y>([-+]?\d+(\.\d+)?([eE]?\+\d+)?))$')
     for line in sys.stdin:
         line = line.strip()
 
-        point_match = re.search('^\s*(?P<first>\w+)\s*(?P<second>([-+]?\d+(\.\d+)?([eE]?\+\d+)?))\s*(?P<third>([-+]?\d+(\.\d+)?([eE]?\+\d+)?))$', line)
+        point_match = regex.search(line)
         if point_match: 
-            name = point_match.group("first")
-            x = float(point_match.group("second"))
-            y = float(point_match.group("third"))
-            point = (name, x, y)
+            x = float(point_match.group("x"))
+            y = float(point_match.group("y"))
+            point = (x, y)
             points.append(point)
     return points
 
@@ -97,8 +98,8 @@ def Split(points):
     return sbxpart1, sbxpart2, sbxmiddle
 
 
-points = parse_input()
-ClosestPair(points,sys.maxsize)
+points = parse_stdin()
+print(ClosestPair(points,sys.maxsize))
     
 
 '''
