@@ -39,6 +39,7 @@ def parse_blosum(location="data/BLOSUM62.txt"):
 def find_difference(i, j, x, y, cache, blosum, indices, gap):
     
     #TODO: This never terminates... Why? 
+    print("This should terminate...", i, j, x, y)
 
     if i == 0: 
         return gap # What is the delta value here? 
