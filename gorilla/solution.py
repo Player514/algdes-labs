@@ -37,20 +37,24 @@ def parse_blosum(location="data/BLOSUM62.txt"):
     return blosum, as_dict
 
 def find_difference(i, j, x, y, cache, blosum, indices, gap):
-    
-    #TODO: This never terminates... Why? 
-    print("This should terminate...", i, j, x, y)
-
     if i == 0: 
         return gap # What is the delta value here? 
     if j == 0: 
         return gap # What is the delta value here? 
 
-    mismatch_penalty = cache[i][j] if cache[i][j] != None else penalty(x[i], y[j], blosum, indices)
-    cache[i][j] = mismatch_penalty
-    case_1 = mismatch_penalty + find_difference(i-1, j-1, x, y, cache, blosum, indices, gap)
-    case_2 = gap + find_difference(i-1, j, x, y, cache, blosum, indices, gap)
-    case_3 = gap + find_difference(i, j-1, x, y, cache, blosum, indices, gap)
+    mismatch_penalty = penalty(x[i], y[j], blosum, indices)
+
+    case_1 = mismatch_penalty + find_difference(i-1, j-1, x, y, cache, blosum, indices, gap) \
+        if cache[i-1][j-1] == None else cache[i-1][j-1]
+    cache[i-1][j-1] = case_1
+
+    case_2 = gap + find_difference(i-1, j, x, y, cache, blosum, indices, gap) \
+        if cache[i-1][j] == None else cache[i-1][j]
+    cache[i-1][j] = case_2
+
+    case_3 = gap + find_difference(i, j-1, x, y, cache, blosum, indices, gap) \
+        if cache[i][j-1] != None else cache[i][j-1]
+    cache[i][j-1] = case_3
 
     minimum = min([case_1, case_2, case_3])
     return minimum
@@ -62,16 +66,15 @@ def find_differences(input, blosum, indices, gap):
         for j in reversed(range(i+1, len(input))):
             first_string = input[i][1]
             second_string = input[j][1]
-            first_string = first_string + ('*' * (len(second_string)-len(first_string))) if len(second_string) > len(first_string) else first_string
-            second_string = second_string + ('*' * (len(first_string)-len(second_string))) if len(first_string) > len(second_string) else second_string
 
-            cache = [[None] * len(first_string)] * len(second_string)
+            cache_dimension = max(len(first_string), len(second_string))
+            cache = [[None] * cache_dimension] * cache_dimension
             difference = find_difference(len(first_string)-1, len(second_string)-1, first_string, second_string, cache, blosum, indices, gap)
             
             first_name = input[i][0]
             second_name = input[j][0]
             combined = f"{first_name}--{second_name}"
-            resulting_string = "" # TODO: Implement finding actual difference string
+            resulting_string = "Missing\nMissing" # TODO: Implement finding actual difference string
             differences[combined] = (difference, resulting_string)
     
     return differences
