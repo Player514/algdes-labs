@@ -37,10 +37,11 @@ def parse_blosum(location="data/BLOSUM62.txt"):
     return blosum, as_dict
 
 def find_difference(i, j, x, y, cache, blosum, indices, gap):
-    if i == 0: 
-        return gap # What is the delta value here? 
-    if j == 0: 
-        return gap # What is the delta value here? 
+    if i == 0 and j == 0: 
+        return 0 
+
+    if i == 0 or j == 0: 
+        return gap  # What is the delta value here? 
 
     mismatch_penalty = penalty(x[i], y[j], blosum, indices)
 
