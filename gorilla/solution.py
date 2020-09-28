@@ -38,10 +38,13 @@ def parse_blosum(location="data/BLOSUM62.txt"):
 
 def find_difference(i, j, x, y, cache, blosum, indices, gap):
     if i == 0 and j == 0: 
-        return 0 
+        return penalty(x[i], y[j], blosum, indices)
 
-    if i == 0 or j == 0: 
-        return gap  # What is the delta value here? 
+    if i == 0:
+        return j * gap
+    
+    if j == 0: 
+        return i * gap
 
     mismatch_penalty = penalty(x[i], y[j], blosum, indices)
 
@@ -54,11 +57,11 @@ def find_difference(i, j, x, y, cache, blosum, indices, gap):
     cache[i-1][j] = case_2
 
     case_3 = gap + find_difference(i, j-1, x, y, cache, blosum, indices, gap) \
-        if cache[i][j-1] != None else cache[i][j-1]
+        if cache[i][j-1] == None else cache[i][j-1]
     cache[i][j-1] = case_3
 
-    minimum = min([case_1, case_2, case_3])
-    return minimum
+    minimum = min([("case_1", case_1), ("case_2", case_2), ("case_3", case_3)], key=lambda lol: lol[1])
+    return minimum[1]
 
 def find_differences(input, blosum, indices, gap):
     differences = {}
