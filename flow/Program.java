@@ -11,7 +11,7 @@ import java.util.Map.Entry;
 
 
 public class Program {  
-    static int s = -1;
+	static int s = -1;
 	static int t = -1;
 	static int numOfVertices = -1;
     
@@ -25,6 +25,8 @@ public class Program {
         
 		for(int[] arc : arcs) {
 			System.out.println("Inserted the following edge into the graph: " + arc[0] + " " + arc[1] + " " + arc[2]);
+			
+			// Change -1 capacity to highest possible integer value when reading a -1
 			graph.addEdge(new Edge(arc[0], arc[1], (arc[2] ==- 1 ? Integer.MAX_VALUE : Integer.valueOf(arc[2]) )));			
 			graph.addEdge(new Edge(arc[1], arc[0], (arc[2] ==- 1 ? Integer.MAX_VALUE : Integer.valueOf(arc[2]) )));
 		}
@@ -66,11 +68,11 @@ public class Program {
     }
 
     private static void reducedFlow(Map<Integer,String> nodeNames,ArrayList<int[]> arcList,String fromName, 
-        String toName,String to2Name,int targetFlow) {
+        String targetVertexOne,String targetVertexTwo,int targetFlow) {
 
         int from = getEdgeIndexByName(fromName,nodeNames);
-        int to48 = getEdgeIndexByName(toName,nodeNames);
-        int to49 = getEdgeIndexByName(to2Name,nodeNames);
+        int to48 = getEdgeIndexByName(targetVertexOne,nodeNames);
+        int to49 = getEdgeIndexByName(targetVertexTwo,nodeNames);
         
         arcList.forEach(arr -> {if(arr[0] == from && arr[1] == to48){arr[2] = targetFlow;}});
         arcList.forEach(arr -> {if(arr[0] == from && arr[1] == to49){arr[2] = targetFlow;}});
@@ -78,6 +80,7 @@ public class Program {
         Graph graphReducedFlow = new Graph(nodeNames.keySet().size());
         
         for (int[] arc : arcList) {
+		// Change -1 capacity to highest possible integer value when reading a -1
             graphReducedFlow.addEdge(new Edge(arc[0], arc[1], (arc[2] ==- 1 ? Integer.MAX_VALUE : Integer.valueOf(arc[2]) )));			
             graphReducedFlow.addEdge(new Edge(arc[1], arc[0], (arc[2] ==- 1 ? Integer.MAX_VALUE : Integer.valueOf(arc[2]) )));
         }
