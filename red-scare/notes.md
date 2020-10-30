@@ -17,6 +17,7 @@ Few:
 
 Alternate: 
 - Dynamic programming? 
-- OPT = take-next OR do-not-take-next if next == alterning or do-not-take-next == alternating
-- Cache the path from node x, y in cache[x][y] 
+- OPT = take-next OR do-not-take-next depending on whether next == alterning or do-not-take-next == alternating
+- Cache the path from node x, y in cache[x][y]
+- Explore cache matrix from true-true to determine path
 
