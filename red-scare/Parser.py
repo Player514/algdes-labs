@@ -53,6 +53,7 @@ def dataGen():
         node = Node(nodeName, color)
         nodesDictionary.update({nodeName.rstrip() : node})
 
+    edges_dict = {}
     edges = []
     for x in range(0,m):
         i = sys.stdin.readline().split()
@@ -60,8 +61,17 @@ def dataGen():
         node2 = nodesDictionary.get(i[2])
         edge = Edge(node1, node2)
         edges.append(edge)
+        if node1.name in edges_dict:
+            edges_dict[node1.name].append(node2)
+        else:
+            edges_dict[node1.name] = [node2]
+        if i[1] != "->":
+            if node2.name in edges_dict:
+                edges_dict[node2.name].append(node1)
+            else:
+                edges_dict[node2.name] = [node1]
 
-    return (nodesDictionary, edges, sourceNode, sinkNode)
+    return nodesDictionary, edges, sourceNode, sinkNode, edges_dict
 
 def printNodeDictionary(nodesDictionary):
     print("Nodes:")
@@ -76,7 +86,7 @@ def printEdges(edges):
     print("\n\n\n\n\n\n")
 
 
-nodesDictionary, edges, startNode, endNode = dataGen()
-print("sourceNode:", startNode,"sinkNode:", endNode, "\n")
-printNodeDictionary(nodesDictionary)
-printEdges(edges)
+# nodesDictionary, edges, startNode, endNode = dataGen()
+# print("sourceNode:", startNode,"sinkNode:", endNode, "\n")
+# printNodeDictionary(nodesDictionary)
+# printEdges(edges)

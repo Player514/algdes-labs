@@ -1,0 +1,48 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Debug 'none.py'",
+            "type": "python",
+            "request": "launch",
+            "program": "${workspaceFolder}/none.py",
+            "console": "integratedTerminal",
+            "args": [ "<", "${workspaceFolder}/data/common-2-20.txt",]
+        },
+        {
+            "name": "Debug 'some.py'",
+            "type": "python",
+            "request": "launch",
+            "program": "${workspaceFolder}/some.py",
+            "console": "integratedTerminal",
+            "args": [ "<", "${workspaceFolder}/data/common-2-20.txt",]
+        },
+        {
+            "name": "Debug 'many.py'",
+            "type": "python",
+            "request": "launch",
+            "program": "${workspaceFolder}/many.py",
+            "console": "integratedTerminal",
+            "args": [ "<", "${workspaceFolder}/data/common-2-20.txt",]
+        },
+        {
+            "name": "Debug 'few.py'",
+            "type": "python",
+            "request": "launch",
+            "program": "${workspaceFolder}/few.py",
+            "console": "integratedTerminal",
+            "args": [ "<", "${workspaceFolder}/data/common-2-20.txt",]
+        },
+        {
+            "name": "Debug 'alternate.py'",
+            "type": "python",
+            "request": "launch",
+            "program": "${workspaceFolder}/alternate.py",
+            "console": "integratedTerminal",
+            "args": [ "<", "${workspaceFolder}/data/common-1-5000.txt",]
+        }
+    ]
+}
