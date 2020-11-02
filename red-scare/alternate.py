@@ -7,7 +7,7 @@ def dfs(s, t, edges):
     visited = set()
     path_map = {}
     while stack:
-        current, current_color = deque.pop(stack)
+        current, current_color = deque.popleft(stack)
         if current not in visited:
             visited.add(current)
             if current == t:
