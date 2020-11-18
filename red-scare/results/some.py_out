@@ -62,7 +62,10 @@ data/grid-25-0.txt	True
 data/grid-25-1.txt	True
 data/grid-25-2.txt	True
 data/grid-5-0.txt	True
-data/grid-50-0.txt	data/grid-50-1.txt	data/grid-50-2.txt	data/grid-5-1.txt	True
+data/grid-50-0.txt
+data/grid-50-1.txt
+data/grid-50-2.txt
+data/grid-5-1.txt	True
 data/grid-5-2.txt	True
 data/increase-n100-1.txt	Graph is directed - stopping
 data/increase-n100-2.txt	Graph is directed - stopping
