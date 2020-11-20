@@ -1,0 +1,254 @@
+data/bht.txt	['5757', '14135', '7']
+data/common-1-100.txt	['100', '8', '47']
+9999999
+data/common-1-1000.txt	['1000', '559', '428']
+9999999
+data/common-1-1500.txt	['1500', '1186', '656']
+9999999
+data/common-1-20.txt	['20', '0', '9']
+9999999
+data/common-1-2000.txt	['2000', '2019', '860']
+9999999
+data/common-1-250.txt	['250', '39', '113']
+9999999
+data/common-1-2500.txt	['2500', '3055', '1067']
+1
+data/common-1-3000.txt	['3000', '4315', '1293']
+1
+data/common-1-3500.txt	['3500', '6005', '1489']
+data/common-1-4000.txt	['4000', '7768', '1708']
+data/common-1-4500.txt	['4500', '9887', '1915']
+data/common-1-50.txt	['50', '1', '22']
+9999999
+data/common-1-500.txt	['500', '145', '226']
+9999999
+data/common-1-5000.txt	['5000', '12095', '2118']
+data/common-1-5757.txt	['5757', '15945', '2457']
+data/common-2-100.txt	['100', '63', '47']
+9999999
+data/common-2-1000.txt	['1000', '5638', '428']
+1
+data/common-2-1500.txt	['1500', '12084', '656']
+data/common-2-20.txt	['20', '3', '9']
+9999999
+data/common-2-2000.txt	['2000', '20478', '860']
+data/common-2-250.txt	['250', '356', '113']
+9999999
+data/common-2-2500.txt	['2500', '31310', '1067']
+data/common-2-3000.txt	['3000', '44606', '1293']
+data/common-2-3500.txt	['3500', '61176', '1489']
+data/common-2-4000.txt	['4000', '79124', '1708']
+data/common-2-4500.txt	['4500', '100374', '1915']
+data/common-2-50.txt	['50', '11', '22']
+9999999
+data/common-2-500.txt	['500', '1409', '226']
+1
+data/common-2-5000.txt	['5000', '123072', '2118']
+data/common-2-5757.txt	['5757', '163671', '2457']
+data/dodecahedron.txt	['20', '30', '20']
+2
+data/G-ex.txt	['8', '9', '3']
+0
+data/gnm-1000-1500-0.txt	['1000', '1500', '100']
+1
+data/gnm-1000-1500-1.txt	['1000', '1500', '500']
+2
+data/gnm-1000-2000-0.txt	['1000', '2000', '100']
+0
+data/gnm-1000-2000-1.txt	['1000', '2000', '500']
+2
+data/gnm-10-15-0.txt	['10', '15', '1']
+0
+data/gnm-10-15-1.txt	['10', '15', '5']
+1
+data/gnm-10-20-0.txt	['10', '20', '1']
+1
+data/gnm-10-20-1.txt	['10', '20', '5']
+2
+data/gnm-2000-3000-0.txt	['2000', '3000', '200']
+0
+data/gnm-2000-3000-1.txt	['2000', '3000', '1000']
+2
+data/gnm-2000-4000-0.txt	['2000', '4000', '200']
+data/gnm-2000-4000-1.txt	['2000', '4000', '1000']
+data/gnm-3000-4500-0.txt	['3000', '4500', '300']
+data/gnm-3000-4500-1.txt	['3000', '4500', '1500']
+data/gnm-3000-6000-0.txt	['3000', '6000', '300']
+data/gnm-3000-6000-1.txt	['3000', '6000', '1500']
+data/gnm-4000-6000-0.txt	['4000', '6000', '400']
+data/gnm-4000-6000-1.txt	['4000', '6000', '2000']
+data/gnm-4000-8000-0.txt	['4000', '8000', '400']
+data/gnm-4000-8000-1.txt	['4000', '8000', '2000']
+data/gnm-5000-10000-0.txt	['5000', '10000', '500']
+data/gnm-5000-10000-1.txt	['5000', '10000', '2500']
+data/gnm-5000-7500-0.txt	['5000', '7500', '500']
+9999999
+data/gnm-5000-7500-1.txt	['5000', '7500', '2500']
+9999999
+data/grid-10-0.txt	['100', '261', '36']
+0
+data/grid-10-1.txt	['100', '261', '31']
+0
+data/grid-10-2.txt	['100', '261', '41']
+2
+data/grid-25-0.txt	['625', '1776', '288']
+0
+data/grid-25-1.txt	['625', '1776', '276']
+0
+data/grid-25-2.txt	['625', '1776', '300']
+5
+data/grid-5-0.txt	['25', '56', '8']
+0
+data/grid-50-0.txt	['2500', '7301', '1176']
+data/grid-50-1.txt	['2500', '7301', '1151']
+0
+data/grid-50-2.txt	['2500', '7301', '1201']
+11
+data/grid-5-1.txt	['25', '56', '6']
+0
+data/grid-5-2.txt	['25', '56', '10']
+1
+data/increase-n100-1.txt	['100', '2642', '53']
+0
+data/increase-n100-2.txt	['100', '2551', '48']
+2
+data/increase-n100-3.txt	['100', '2213', '51']
+1
+data/increase-n10-1.txt	['10', '21', '5']
+1
+data/increase-n10-2.txt	['10', '29', '7']
+2
+data/increase-n10-3.txt	['10', '26', '8']
+9999999
+data/increase-n20-1.txt	['20', '80', '11']
+2
+data/increase-n20-2.txt	['20', '129', '11']
+1
+data/increase-n20-3.txt	['20', '99', '13']
+1
+data/increase-n500-1.txt	['500', '62600', '258']
+data/increase-n500-2.txt	['500', '64522', '251']
+data/increase-n500-3.txt	['500', '61751', '255']
+data/increase-n50-1.txt	['50', '641', '21']
+1
+data/increase-n50-2.txt	['50', '537', '23']
+1
+data/increase-n50-3.txt	['50', '648', '27']
+1
+data/increase-n8-1.txt	['8', '16', '6']
+1
+data/increase-n8-2.txt	['8', '13', '4']
+1
+data/increase-n8-3.txt	['8', '20', '4']
+0
+data/P3.txt	['3', '2', '1']
+1
+data/rusty-1-17.txt	['17', '21', '1']
+0
+data/rusty-1-2000.txt	['2000', '2001', '1']
+9999999
+data/rusty-1-2500.txt	['2500', '3134', '1']
+9999999
+data/rusty-1-3000.txt	['3000', '4444', '1']
+0
+data/rusty-1-3500.txt	['3500', '5974', '1']
+data/rusty-1-4000.txt	['4000', '7744', '1']
+data/rusty-1-4500.txt	['4500', '9900', '1']
+data/rusty-1-5000.txt	['5000', '12060', '1']
+data/rusty-1-5757.txt	['5757', '15945', '1']
+data/rusty-2-2000.txt	['2000', '20422', '1']
+data/rusty-2-2500.txt	['2500', '32004', '1']
+data/rusty-2-3000.txt	['3000', '45332', '1']
+data/rusty-2-3500.txt	['3500', '61442', '1']
+data/rusty-2-4000.txt	['4000', '79432', '1']
+data/rusty-2-4500.txt	['4500', '101086', '1']
+data/rusty-2-5000.txt	['5000', '123432', '1']
+data/rusty-2-5757.txt	['5757', '163671', '1']
+data/ski-illustration.txt	['36', '49', '1']
+0
+data/ski-level10-1.txt	['79', '107', '23']
+9999999
+data/ski-level10-2.txt	['76', '98', '7']
+0
+data/ski-level10-3.txt	['77', '104', '29']
+2
+data/ski-level20-1.txt	['252', '345', '83']
+3
+data/ski-level20-2.txt	['253', '337', '83']
+8
+data/ski-level20-3.txt	['254', '353', '11']
+9999999
+data/ski-level3-1.txt	['16', '21', '5']
+1
+data/ski-level3-2.txt	['14', '18', '4']
+0
+data/ski-level3-3.txt	['15', '16', '3']
+0
+data/ski-level5-1.txt	['29', '34', '8']
+1
+data/ski-level5-2.txt	['26', '32', '5']
+1
+data/ski-level5-3.txt	['27', '30', '0']
+0
+data/smallworld-10-0.txt	['100', '241', '10']
+0
+data/smallworld-10-1.txt	['100', '241', '50']
+0
+data/smallworld-20-0.txt	['400', '1088', '20']
+0
+data/smallworld-20-1.txt	['400', '1088', '200']
+1
+data/smallworld-3-0.txt	['9', '16', '3']
+1
+data/smallworld-30-0.txt	['900', '2472', '30']
+0
+data/smallworld-30-1.txt	['900', '2472', '450']
+1
+data/smallworld-3-1.txt	['9', '16', '4']
+1
+data/smallworld-40-0.txt	['1600', '4431', '40']
+data/smallworld-40-1.txt	['1600', '4431', '800']
+data/smallworld-50-0.txt	['2500', '6930', '50']
+data/smallworld-50-1.txt	['2500', '6930', '1250']
+data/wall-n-1.txt	['8', '8', '1']
+0
+data/wall-n-10.txt	['80', '89', '1']
+0
+data/wall-n-100.txt	['800', '899', '1']
+0
+data/wall-n-1000.txt	['8000', '8999', '1']
+data/wall-n-10000.txt	['80000', '89999', '1']
+data/wall-n-2.txt	['16', '17', '1']
+0
+data/wall-n-3.txt	['24', '26', '1']
+0
+data/wall-n-4.txt	['32', '35', '1']
+0
+data/wall-p-1.txt	['8', '8', '1']
+0
+data/wall-p-10.txt	['62', '71', '1']
+0
+data/wall-p-100.txt	['602', '701', '1']
+0
+data/wall-p-1000.txt	['6002', '7001', '1']
+data/wall-p-10000.txt	['60002', '70001', '1']
+data/wall-p-2.txt	['14', '15', '1']
+0
+data/wall-p-3.txt	['20', '22', '1']
+0
+data/wall-p-4.txt	['26', '29', '1']
+0
+data/wall-z-1.txt	['8', '8', '1']
+0
+data/wall-z-10.txt	['71', '80', '1']
+0
+data/wall-z-100.txt	['701', '800', '1']
+0
+data/wall-z-1000.txt	['7001', '8000', '1']
+data/wall-z-10000.txt	['70001', '80000', '1']
+data/wall-z-2.txt	['15', '16', '1']
+0
+data/wall-z-3.txt	['22', '24', '1']
+0
+data/wall-z-4.txt	['29', '32', '1']
+0
