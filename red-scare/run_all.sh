@@ -1,11 +1,13 @@
 #!/bin/sh
-PROGRAM_TO_RUN="none.py"
+PROGRAM_TO_RUN="few.py"
 
 OUT_FILE="results/${PROGRAM_TO_RUN}_out"
-rm OUT_FILE
-touch OUT_FILE
+printf "" > ${OUT_FILE}
 for FILE in data/*.txt; do
   printf "\n\nStarting ${FILE}\n"
   printf "${FILE}\t" >> ${OUT_FILE}
   python ${PROGRAM_TO_RUN} < "$FILE" >> ${OUT_FILE}
+  if [[ $? -ne 0 ]]; then
+    printf "?\n" >> ${OUT_FILE}
+  fi
 done
