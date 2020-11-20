@@ -2,6 +2,8 @@ import Parser as P
 import re
 import sys
 
+sys.setrecursionlimit(5000)
+
 class Node2:
   def __init__(self, name, color):
     self.name = name
@@ -32,7 +34,7 @@ def run(currentnodename,end,nodes_dictionary,cost):
 
 def dataGen2():
     line1 = sys.stdin.readline().split()
-    print(line1)
+    # print(line1)
     n = int(line1[0]) #number of vertices
     m = int(line1[1]) #number of edges
     r = int(line1[2]) #cardinality of R
