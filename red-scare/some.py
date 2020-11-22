@@ -196,10 +196,7 @@ for i, n in enumerate(nodesDictionary):
 
 edge_to_end = None
 red_nodes = get_all_red_nodes()
-c = 0
 for i, node in red_nodes:
-    c += 1
-    print(c)
     print_d("Current goal node: ", node.getName(), node.getColor())
     print_d("Creating edge from", node.getName(), "to new_ending_node")
 
