@@ -103,7 +103,7 @@ def contract_graph(nodesDictionary, edges, s, t, edges_dict):
         if n in edges_dict:
             for _new_to in edges_dict[n]:
                 new_to = _new_to.getName()
-                if new_to not in explored:
+                if new_to not in explored and new_to in edges_dict:
                     if is_contractible(new_to):
                         remove_node(new_to)
 
@@ -131,11 +131,11 @@ def BFS(s, t):
     found_path = [-1] * len(nodesDictionary)
     q = queue.Queue()
     explored = set()
+    explored.add(s)
     q.put(s)
 
     while not q.empty():
         node = q.get()
-        explored.add(node)
         if node not in edges_dict:
             continue
         print_d(node, [x.getName() for x in edges_dict[node]])
@@ -147,6 +147,7 @@ def BFS(s, t):
                 to_node_idx = name_to_idx[to_node]
                 node_idx = name_to_idx[node]
                 found_path[to_node_idx] = node_idx
+                explored.add(to_node)
                 q.put(to_node)
                 if to_node == t:
                     return to_path_map(found_path, name_to_idx[s], name_to_idx[t])
@@ -178,11 +179,11 @@ def get_all_red_nodes():
 
 nodesDictionary, edges, s, t, edges_dict = dataGen()
 
-contract_graph(nodesDictionary, edges, s, t, edges_dict)
-
 if is_graph_directed():
     print("?!")
     exit()
+
+contract_graph(nodesDictionary, edges, s, t, edges_dict)
 
 nodesDictionary, edges, edges_dict, new_s, new_t, new_ending_node, new_starting_node = modify_graph(nodesDictionary,
                                                                                                     edges, s, t,
