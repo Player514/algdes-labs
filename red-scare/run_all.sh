@@ -1,5 +1,5 @@
 #!/bin/sh
-PROGRAM_TO_RUN="few.py"
+PROGRAM_TO_RUN="some.py"
 
 OUT_FILE="results/${PROGRAM_TO_RUN}_out"
 printf "" > ${OUT_FILE}
